@@ -1,17 +1,38 @@
+<table long="800000%">
+  <tr long="800000%", wo>
+    <td ><img src="caratula.png" alt="Descripción de la imagen" width="60"></td>
+    <td long="800000%">
+      <p> Base de datos y Gestión de proyecto de software</p>
+      <p>TF Base de datos libre</p> 
+    </td>
+  </tr>
+</table>
+
+
 <p align="center">
   <BR>
-   <img src="images/caratula.png" alt="Carátula del Proyecto" width="800"/><BR>
+   <img src="caratula.png" alt="Carátula del Proyecto" width="200"/><BR>
   <BR>
   <BR>
   <BR> Trabajo Final de Base de Datos Libre <BR>
           Elian Cairati ,María Juliana Pintos <BR>
   Técnico Superior en Desarrollo de Software, Escuela Superior de Comercio N° 43<BR>
-          3° Redes y Comunicación<BR>
+          3° Base de Datos<BR>
         3° Gestión y Proyectos de Software<BR>
           Ariel Nardelli<BR>
           Matias Nardelli<BR>
         03 de septiembre 2024<BR>
 </p> <BR>
+
+<table width="9000%", align="center",long="9000%">
+  <tr>
+    <td>
+      <br> <p align="center",> Elian Carati, María Juliana Pintos</p>
+      <br> <p align="center" >3° Año - Técnico Superior en Desarrollo de Software</p> 
+      <br> <p align="center">Escuela Superior de comercio N°43</p>
+    </td>
+  </tr>
+</table>
 
 # Trabajo-final
 Diseñar una base de datos con sus tablas que contengan dicha información
