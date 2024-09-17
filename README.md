@@ -54,8 +54,8 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 * Ponemos la decodificación en utf8: UTF-8 unicode.
 
   <div style="display: flex; justify-content: center;">
-    <img src="p2.png" alt="Imagen 2" width="400" style="margin: 80px;"/>
-    <img src="p3.png" alt="Imagen 3" width="400" style="margin: 80px;"/>
+    <img src="p2.png" alt="Imagen 2" width="300" style="margin: 80px;"/>
+    <img src="p3.png" alt="Imagen 3" width="300" style="margin: 80px;"/>
   </div>
 
 
