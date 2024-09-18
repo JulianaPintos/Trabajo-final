@@ -97,5 +97,7 @@ Despues para poder exportar la información de la tabla eventos a lugares decidi
 * SELECT * FROM eventos WHERE aforo= "990" or modalidad_formato = "paseo";
 
 
-
-
+# Sistema de Base de Datos
+<div style="display: flex; justify-content: center;">
+    <img src="Base_de_Datos_de_Trabajo.png" width="300" style="margin: 80px;"/>
+  </div>
