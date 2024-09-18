@@ -32,11 +32,14 @@
 </table>
 
 # Trabajo-final
-Diseñar una base de datos con sus tablas que contengan dicha información
+<p alingn="justify">Presentar la base de datos elegida al profesor y realizar un análisis de los archivos excel o del formato que esté la información y en base a eso diseñar una base de datos con sus tablas que contenga dicha información. Diseñar también indices alternativos y las relaciones entre las mismas. <br>Presentar el diseño de las tablas gráficamente mediante el software que usted desee.</p>
+<p><li><b>Lenguaje SQL</b></li>
+<li>Sentencias DDL (Lenguaje de definición de datos) de creación de tablas y relaciones.</li>
+<li>Importar los datos desde los archivos excel y llenar las tablas creadas con dicha información.</li></p>
+<p>El trabajo debe ser alojado en un repositorio publico en el cual deben estar el archivo de datos publicos utilizado en formato “csv”, un archivo de respaldo de la base de datos una vez finalizada y confeccionar un archivo Readme.md donde describan la base de datos, contener diagrama, y demostración de las sentencias solicitadas anteriormente. Además, crear instrucciones de como importar el archivo de respaldo para ser utilizado por otras personas.</p>
 
-
-
-Este proyecto consiste en crear una página web para la venta de carteras personalizadas. A continuación, se describen los pasos para ejecutar y desplegar el proyecto.
+# Introducción
+<p aling="justify">En el contexto de eleguir una base de datos, el profesor nos aporto en el trabajo las páginas donde encontraremos base de datos libre en donde buscamos la que más nos llame la atención y también que cumplan los requisitos que nos pedian en el trabajo. En nuestro caso, la elección de base de datos, está gestiona los permisos de eventos masivos del 2024, dado que nos aporta datos de los eventos, las localizaciones y regulaciones implicadas, se requiere una solución eficiente que permita manejar la información de manera precisa y segura.</p>
 
 
 # Importar un archivo excel a heidi
