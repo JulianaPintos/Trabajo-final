@@ -58,5 +58,44 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     <img src="p3.png" alt="Imagen 3" width="300" style="margin: 80px;"/>
   </div>
 
+# Crear una nueva tabla y exportar la información de forma ordenada
+# Lugares
+* CREATE TABLE lugares
+* lug_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+* lug_nomb VARCHAR(120) );
+ 
+Despues para poder exportar la información de la tabla eventos a lugares decidimos utilizar este comando:
+* INSERT INTO lugares (lug_nomb) SELECT distinct(lugar) FROM eventos;
+
+# Aforos
+* CREATE TABLE aforos
+* afo_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+* afo_nomb VARCHAR(120) );
+* INSERT INTO aforos (afo_nomb) SELECT distinct(aforo) FROM eventos;
+
+# Barrios
+* CREATE TABLE barrios
+* bar_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+* bar_nomb VARCHAR(120) );
+* INSERT INTO barrios (bar_nomb) SELECT distinct(barrio) FROM eventos;
+
+# Eventos_tipo
+* CREATE TABLE eventos_tipo
+* eve_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+* eve_nomb VARCHAR(120) );
+* INSERT INTO eventos_tipo (eve_nomb) SELECT distinct(evento) FROM eventos;
+
+# Modalidad_formato
+* CREATE TABLE modalidad_formatos
+* for_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+* for_nomb VARCHAR(120) );
+* INSERT INTO modalidad_formatos (for_nomb) SELECT distinct(modalidad_formato) FROM eventos;
+
+# Consultas
+* SELECT * FROM eventos WHERE aforo= "990";
+* SELECT * FROM eventos WHERE aforo= "990" AND modalidad_formato = "paseo";
+* SELECT * FROM eventos WHERE aforo= "990" or modalidad_formato = "paseo";
+
+
 
 
