@@ -60,7 +60,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 
 # Crear una nueva tabla y exportar la información de forma ordenada
 # Lugares
-* CREATE TABLE lugares
+* CREATE TABLE lugares(
 * lug_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 * lug_nomb VARCHAR(120) );
  
@@ -68,25 +68,25 @@ Despues para poder exportar la información de la tabla eventos a lugares decidi
 * INSERT INTO lugares (lug_nomb) SELECT distinct(lugar) FROM eventos;
 
 # Aforos
-* CREATE TABLE aforos
+* CREATE TABLE aforos(
 * afo_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 * afo_nomb VARCHAR(120) );
 * INSERT INTO aforos (afo_nomb) SELECT distinct(aforo) FROM eventos;
 
 # Barrios
-* CREATE TABLE barrios
+* CREATE TABLE barrios(
 * bar_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 * bar_nomb VARCHAR(120) );
 * INSERT INTO barrios (bar_nomb) SELECT distinct(barrio) FROM eventos;
 
 # Eventos_tipo
-* CREATE TABLE eventos_tipo
+* CREATE TABLE eventos_tipo(
 * eve_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 * eve_nomb VARCHAR(120) );
 * INSERT INTO eventos_tipo (eve_nomb) SELECT distinct(evento) FROM eventos;
 
 # Modalidad_formato
-* CREATE TABLE modalidad_formatos
+* CREATE TABLE modalidad_formatos(
 * for_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 * for_nomb VARCHAR(120) );
 * INSERT INTO modalidad_formatos (for_nomb) SELECT distinct(modalidad_formato) FROM eventos;
