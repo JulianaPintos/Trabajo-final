@@ -33,7 +33,7 @@
 
 # Trabajo-final
 <p alingn="justify">Presentar la base de datos elegida al profesor y realizar un análisis de los archivos excel o del formato que esté la información y en base a eso diseñar una base de datos con sus tablas que contenga dicha información. Diseñar también indices alternativos y las relaciones entre las mismas. <br>Presentar el diseño de las tablas gráficamente mediante el software que usted desee.</p>
-<p><<b>Lenguaje SQL</b>
+<p><b>Lenguaje SQL</b>
 <li>Sentencias DDL (Lenguaje de definición de datos) de creación de tablas y relaciones.</li>
 <li>Importar los datos desde los archivos excel y llenar las tablas creadas con dicha información.</li></p>
 <p>El trabajo debe ser alojado en un repositorio publico en el cual deben estar el archivo de datos publicos utilizado en formato “csv”, un archivo de respaldo de la base de datos una vez finalizada y confeccionar un archivo Readme.md donde describan la base de datos, contener diagrama, y demostración de las sentencias solicitadas anteriormente. Además, crear instrucciones de como importar el archivo de respaldo para ser utilizado por otras personas.</p>
@@ -62,20 +62,66 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
   </div>
 
 # Crear una nueva tabla y exportar la información de forma ordenada
-# Lugares
-* CREATE TABLE lugares(
-* lug_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-* lug_nomb VARCHAR(120) );
- 
-Despues para poder exportar la información de la tabla eventos a lugares decidimos utilizar este comando:
-* INSERT INTO lugares (lug_nomb) SELECT distinct(lugar) FROM eventos;
 
-# Aforos
+<table>
+  <tr>
+    <td colspan="2">
+      <table>
+        <tr>
+          <p align="center">LUGARES</p>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <tr>
+           <img src="p4.png" alt="Descripción de la imagen" width="800" long="200">
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr>
+           <p align="left"><li> CREATE TABLE lugares(</li> </p> <p align="left"><li> lug_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,</li></p><p align="left"><li>lug_nomb VARCHAR(120) );</li></p><p align="left">Despues para poder exportar la información de la tabla eventos a lugares decidimos utilizar este comando:></p><p align="left"><li>INSERT INTO lugares (lug_nomb) SELECT distinct(lugar) FROM eventos;</li> </p> 
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
 * CREATE TABLE aforos(
 * afo_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
 * afo_nomb VARCHAR(120) );
 * INSERT INTO aforos (afo_nomb) SELECT distinct(aforo) FROM eventos;
-
+<table>
+  <tr>
+    <td colspan="2">
+      <table>
+        <tr>
+          <p align="center">AFORO</p>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <img>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr>
+           <p align="left"><li> CREATE TABLE aforo(</li> </p> <p align="left"><li> afo_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,</li></p><p align="left"><li>afo_nomb VARCHAR(120));</li></p><p align="left"><li>INSERT INTO aforo (afo_nomb) SELECT distinct(aforo) FROM eventos;</li> </p> 
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 # Barrios
 * CREATE TABLE barrios(
 * bar_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
