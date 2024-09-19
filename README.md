@@ -196,7 +196,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     <td>
       <table>
         <tr>
-           <p align="left"><li> CREATE TABLE modalidad_formatos(</li> </p> <p align="left"><li> for_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,</li></p><p align="left"><li>for_nomb VARCHAR(120) );</li></p><p align="left"><li>INSERT INTO modalidad_formatos (for_nomb) SELECT distinct() FROM eventos;</li> </p> 
+           <p align="left"><li> CREATE TABLE modalidad_formatos(</li> </p> <p align="left"><li> for_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,</li></p><p align="left"><li>for_nomb VARCHAR(120) );</li></p><p align="left"><li>INSERT INTO modalidad_formatos (for_nomb) SELECT distinct(modalidad_formato) FROM eventos;</li> </p> 
         </tr>
       </table>
     </td>
