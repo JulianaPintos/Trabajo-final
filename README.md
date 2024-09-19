@@ -122,6 +122,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
+
 # Barrios
 * CREATE TABLE barrios(
 * bar_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
