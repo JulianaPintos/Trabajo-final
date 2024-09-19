@@ -62,7 +62,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
   </div>
 
 # Crear una nueva tabla y exportar la información de forma ordenada
-
+* TABLA 1
 <table>
   <tr>
     <td colspan="2">
@@ -90,11 +90,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
-
-* CREATE TABLE aforos(
-* afo_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-* afo_nomb VARCHAR(120) );
-* INSERT INTO aforos (afo_nomb) SELECT distinct(aforo) FROM eventos;
+* TABLA 2
 <table>
   <tr>
     <td colspan="2">
@@ -109,7 +105,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     <td>
       <table>
         <tr>
-          <img>
+           <img src="p5.png" alt="Descripción de la imagen" width="800" long="200">
         </tr>
       </table>
     </td>
@@ -122,7 +118,34 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
-
+* TABLA 3:
+<table>
+  <tr>
+    <td colspan="2">
+      <table>
+        <tr>
+          <p align="center">LUGARES</p>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <tr>
+           <img src="p6.png" alt="Descripción de la imagen" width="800" long="200">
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr>
+           <p align="left"><li> CREATE TABLE Barrios(</li> </p> <p align="left"><li> bar_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,</li></p><p align="left"><li>bar_nomb VARCHAR(120) );</li></p><p align="left"><li>INSERT INTO barrios (bar_nomb) SELECT distinct(barrio) FROM eventos;</li> </p> 
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 # Barrios
 * CREATE TABLE barrios(
 * bar_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
