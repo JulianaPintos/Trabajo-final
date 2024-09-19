@@ -118,13 +118,13 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
-* TABLA 3:
+* TABLA 3
 <table>
   <tr>
     <td colspan="2">
       <table>
         <tr>
-          <p align="center">LUGARES</p>
+          <p align="center">BARRIOS</p>
         </tr>
       </table>
     </td>
