@@ -146,17 +146,35 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
-# Barrios
-* CREATE TABLE barrios(
-* bar_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-* bar_nomb VARCHAR(120) );
-* INSERT INTO barrios (bar_nomb) SELECT distinct(barrio) FROM eventos;
+* TABLA 4
+<table>
+  <tr>
+    <td colspan="2">
+      <table>
+        <tr>
+          <p align="center">EVENTOS_TIPO</p>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <table>
+        <tr>
+           <img src="p7.png" alt="Descripción de la imagen" width="800" long="200">
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr>
+           <p align="left"><li> CREATE TABLE eventos_tipo(</li> </p> <p align="left"><li> eve_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,</li></p><p align="left"><li>eve_nomb VARCHAR(120) );</li></p><p align="left"><li>INSERT INTO eventos_tipo (eve_nomb) SELECT distinct(evento) FROM eventos;</li> </p> 
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 
-# Eventos_tipo
-* CREATE TABLE eventos_tipo(
-* eve_nuro INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-* eve_nomb VARCHAR(120) );
-* INSERT INTO eventos_tipo (eve_nomb) SELECT distinct(evento) FROM eventos;
 
 # Modalidad_formato
 * CREATE TABLE modalidad_formatos(
