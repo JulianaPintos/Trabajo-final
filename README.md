@@ -145,7 +145,8 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 * SELECT * FROM eventos WHERE aforo= "990";
 * SELECT * FROM eventos WHERE aforo= "990" AND modalidad_formato = "paseo"
 * SELECT * FROM eventos WHERE aforo= "990" or modalidad_formato = "paseo";
-
+* SELECT * FROM eventos WHERE ((aforo = "990") or (aforo = "1.000"));
+* SELECT * FROM eventos GROUP BY modalidad_formato ORDER BY fecha ;
 
 # Sistema de Base de Datos
 <div style="display: flex; justify-content: center;">
