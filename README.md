@@ -205,6 +205,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 
 
 # Consultas
+<p align="justify">Aca dejamos algunas consultas que hicimos a la base de datos:</p><br>
 * SELECT * FROM eventos WHERE aforo= "990";
 * SELECT * FROM eventos WHERE aforo= "990" AND modalidad_formato = "paseo"
 * SELECT * FROM eventos WHERE aforo= "990" or modalidad_formato = "paseo";
@@ -212,6 +213,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 * SELECT * FROM eventos GROUP BY modalidad_formato ORDER BY fecha ;
 
 # Sistema de Base de Datos
+<p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
 <div style="display: flex; justify-content: center;">
     <img src="Base_de_Datos_de_Trabajo.png" width="300" style="margin: 80px;"/>
   </div>
