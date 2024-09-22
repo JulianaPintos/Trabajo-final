@@ -206,11 +206,25 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 
 # Consultas
 <p align="justify">Aca dejamos algunas consultas que hicimos a la base de datos:</p><br>
-* SELECT * FROM eventos WHERE aforo= "990";<br>
-* SELECT * FROM eventos WHERE aforo= "990" AND modalidad_formato = "paseo"<br>
-* SELECT * FROM eventos WHERE aforo= "990" or modalidad_formato = "paseo";<br>
-* SELECT * FROM eventos WHERE ((aforo = "990") or (aforo = "1.000"));<br>
-* SELECT * FROM eventos GROUP BY modalidad_formato ORDER BY fecha ;<br>
+* select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
+where (modalidad_formato = "Recital" or modalidad_formato = "Paseo") and  barrio = "Palermo";<br>
+
+* SELECT  fecha AS horario,modalidad_formato as formato,aforo, barrio, COUNT(*) as evento FROM eventos
+WHERE aforo= "990" ;<br>
+
+* select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
+WHERE NOT (modalidad_formato = "Recital" or modalidad_formato = "Paseo");<br>
+
+* SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, cierre,aforo, barrio 
+from eventos  WHERE aforo= "990" LIMIT 0,10;<br>
+
+* SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, cierre,aforo, barrio 
+from eventos  WHERE modalidad_formato= "recital" LIMIT 10,10;<br>
+
+* select aforo, fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
+where (aforo = "1000" or aforo = "5000") or (modalidad_formato = "carrera" or modalidad_formato = "jornada")
+ORDER BY modalidad_formato desc , aforo asc;<br>
+
 
 # Sistema de Base de Datos
 <p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
