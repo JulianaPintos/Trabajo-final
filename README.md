@@ -39,7 +39,7 @@
 <p>El trabajo debe ser alojado en un repositorio publico en el cual deben estar el archivo de datos publicos utilizado en formato “csv”, un archivo de respaldo de la base de datos una vez finalizada y confeccionar un archivo Readme.md donde describan la base de datos, contener diagrama, y demostración de las sentencias solicitadas anteriormente. Además, crear instrucciones de como importar el archivo de respaldo para ser utilizado por otras personas.</p>
 
 # Introducción
-<p aling="justify">En el contexto de eleguir una base de datos, el profesor nos aporto en el trabajo las páginas donde encontraremos base de datos libre en donde buscamos la que más nos llame la atención y también que cumplan los requisitos que nos pedian en el trabajo. En nuestro caso, la elección de base de datos, está gestiona los permisos de eventos masivos del 2024, dado que nos aporta datos de los eventos, las localizaciones y regulaciones implicadas, se requiere una solución eficiente que permita manejar la información de manera precisa y segura.</p>
+<p aling="justify">En el contexto de elegir una base de datos, el profesor nos proporcionó páginas con bases de datos libres donde podemos buscar la que más nos llame la atención y, al mismo tiempo, cumpla con los requisitos solicitados para el trabajo. En nuestro caso, la base de datos seleccionada gestionará los permisos para eventos masivos del 2024, dado que contiene información sobre los eventos, las localizaciones y las regulaciones implicadas. Se requiere una solución eficiente que permita manejar la información de manera precisa y segura.</p>
 
 
 # Importar un archivo excel a heidi
@@ -211,6 +211,8 @@ where (modalidad_formato = "Recital" or modalidad_formato = "Paseo") and  barrio
 
 * SELECT  fecha AS horario,modalidad_formato as formato,aforo, barrio, COUNT(*) as evento FROM eventos
 WHERE aforo= "990" ;<br>
+
+** Esto es un ejemplo **
 
 * select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
 WHERE NOT (modalidad_formato = "Recital" or modalidad_formato = "Paseo");<br>
