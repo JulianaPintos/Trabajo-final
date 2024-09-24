@@ -24,7 +24,7 @@
 <table width="9000%", align="center",long="9000%">
   <tr>
     <td>
-       <p align="center",> Elian Carati, María Juliana Pintos</p>
+       <p align="center",> Elian Cairati, María Juliana Pintos</p>
        <p align="center" >3° Año - Técnico Superior en Desarrollo de Software</p> 
        <p align="center">Escuela Superior de comercio N°43</p>
     </td>
