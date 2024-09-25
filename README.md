@@ -243,5 +243,5 @@ barrios.bar_nomb = "Palermo"
 # Sistema de Base de Datos
 <p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
 <div style="display: flex; justify-content: center;">
-    <img src="Base_de_Datos_de_Trabajo.png" width="800" style="margin: 800px;"/>
+    <img src="Base_Datos_TP2.png" width="800" style="margin: 800px;"/>
   </div>
