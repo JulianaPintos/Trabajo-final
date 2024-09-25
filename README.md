@@ -235,6 +235,8 @@ where (aforo = "1000" or aforo = "5000") or (modalidad_formato = "carrera" or mo
 ORDER BY modalidad_formato desc , aforo asc;<br>
 ```
 
+** Esto es un ejemplo **
+
 ```sql
 SELECT eventos.fecha as horario,eventos_tipo.eve_nomb,
 modalidad_formatos.for_nomb as formato, barrios.bar_nomb from eventos
