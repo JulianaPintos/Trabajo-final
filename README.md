@@ -31,7 +31,7 @@
   </tr>
 </table>
 
-# Trabajo-final
+# Trabajo final
 <p alingn="justify">Presentar la base de datos elegida al profesor y realizar un análisis de los archivos excel o del formato que esté la información y en base a eso diseñar una base de datos con sus tablas que contenga dicha información. Diseñar también indices alternativos y las relaciones entre las mismas. <br>Presentar el diseño de las tablas gráficamente mediante el software que usted desee.</p>
 <p><b>Lenguaje SQL</b>
 <li>Sentencias DDL (Lenguaje de definición de datos) de creación de tablas y relaciones.</li>
@@ -209,8 +209,10 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 * select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
 where (modalidad_formato = "Recital" or modalidad_formato = "Paseo") and  barrio = "Palermo";<br>
 
-* SELECT  fecha AS horario,modalidad_formato as formato,aforo, barrio, COUNT(*) as evento FROM eventos
+```sql
+SELECT  fecha AS horario,modalidad_formato as formato,aforo, barrio, COUNT(*) as evento FROM eventos
 WHERE aforo= "990" ;<br>
+```
 
 ** Esto es un ejemplo **
 
