@@ -244,6 +244,58 @@ JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
 where (modalidad_formatos.for_nomb = "Recital" or modalidad_formatos.for_nomb = "Paseo") AND 
 barrios.bar_nomb = "Palermo";
 ```
+```sql
+SELECT  eventos.FECHA AS horario,modalidad_formatos.for_nomb as formato, aforos.afo_nomb,
+barrios.bar_nomb, COUNT(*) as evento FROM eventos
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
+JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
+JOIN aforos ON eventos.AFORO = aforos.afo_nomb
+WHERE aforos.afo_nomb = "990";
+```
+
+```sql
+SELECT eventos.fecha as horario,eventos_tipo.eve_nomb,
+modalidad_formatos.for_nomb as formato, barrios.bar_nomb from eventos
+JOIN eventos_tipo ON eventos.evento = eventos_tipo.eve_nomb
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
+JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
+where NOT (modalidad_formatos.for_nomb = "Recital" or modalidad_formatos.for_nomb = "Paseo") and
+barrios.bar_nomb = "Palermo";
+```
+
+```sql
+SELECT eventos.FECHA AS horario, eventos_tipo.eve_nomb, lugares.lug_nomb, modalidad_formatos.for_nomb as formato,
+eventos.APERTURA, eventos.CIERRE,aforos.afo_nomb, barrios.bar_nomb from eventos
+JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
+JOIN aforos ON eventos.AFORO = aforos.afo_nomb
+JOIN lugares ON eventos.LUGAR = lugares.lug_nomb
+JOIN eventos_tipo ON eventos.EVENTO = eventos_tipo.eve_nomb 
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
+WHERE aforos.afo_nomb= "990" LIMIT 0,10;
+```
+
+```sql
+SELECT eventos.FECHA AS horario, eventos_tipo.eve_nomb, lugares.lug_nomb, modalidad_formatos.for_nomb as formato,
+eventos.APERTURA, eventos.CIERRE,aforos.afo_nomb, barrios.bar_nomb from eventos
+JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
+JOIN aforos ON eventos.AFORO = aforos.afo_nomb
+JOIN lugares ON eventos.LUGAR = lugares.lug_nomb
+JOIN eventos_tipo ON eventos.EVENTO = eventos_tipo.eve_nomb 
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
+WHERE modalidad_formatos.for_nomb = "Recital" LIMIT 10,10;
+```
+
+```sql
+SELECT eventos.FECHA AS horario,modalidad_formatos.for_nomb as formato, aforos.afo_nomb,
+barrios.bar_nomb from eventos
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
+JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
+JOIN aforos ON eventos.AFORO = aforos.afo_nomb
+where (aforos.afo_nomb = "1000" or aforos.afo_nomb = "5000") OR 
+(modalidad_formatos.for_nomb = "carrera" or modalidad_formatos.for_nomb = "jornada")
+ORDER BY modalidad_formatos.for_nomb desc , aforos.afo_nomb asc;
+```
+
 # Sistema de Base de Datos
 <p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
 <div style="display: flex; justify-content: center;">
