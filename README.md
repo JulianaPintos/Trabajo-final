@@ -215,20 +215,23 @@ WHERE aforo= "990" ;<br>
 ```
 
 ** Esto es un ejemplo **
-
-* select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
+```sql
+select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
 WHERE NOT (modalidad_formato = "Recital" or modalidad_formato = "Paseo");<br>
-
-* SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, cierre,aforo, barrio 
+```
+```sql
+SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, cierre,aforo, barrio 
 from eventos  WHERE aforo= "990" LIMIT 0,10;<br>
-
+```
+```sql
 * SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, cierre,aforo, barrio 
 from eventos  WHERE modalidad_formato= "recital" LIMIT 10,10;<br>
-
-* select aforo, fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
+```
+```sql
+select aforo, fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
 where (aforo = "1000" or aforo = "5000") or (modalidad_formato = "carrera" or modalidad_formato = "jornada")
 ORDER BY modalidad_formato desc , aforo asc;<br>
-
+```
 
 # Sistema de Base de Datos
 <p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
