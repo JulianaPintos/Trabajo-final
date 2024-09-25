@@ -206,9 +206,10 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 
 # Consultas
 <p align="justify">Aca dejamos algunas consultas que hicimos a la base de datos:</p><br>
-* select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
+```sql
+select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
 where (modalidad_formato = "Recital" or modalidad_formato = "Paseo") and  barrio = "Palermo";<br>
-
+```
 ```sql
 SELECT  fecha AS horario,modalidad_formato as formato,aforo, barrio, COUNT(*) as evento FROM eventos
 WHERE aforo= "990" ;<br>
