@@ -234,6 +234,11 @@ SELECT aforo, fecha as horario,evento ,modalidad_formato as formato, barrio from
 where (aforo = "1000" or aforo = "5000") or (modalidad_formato = "carrera" or modalidad_formato = "jornada")
 ORDER BY modalidad_formato desc , aforo asc;<br>
 ```
+# SELECT eventos.fecha as horario,eventos_tipo.eve_nomb,
+modalidad_formatos.for_nomb as formato, barrios.bar_nomb from eventos
+JOIN eventos_tipo ON eventos.evento = eventos_tipo.eve_nuro
+where (modalidad_formatos.for_nomb = "Recital" or modalidad_formatos.for_nomb = "Paseo") AND 
+barrios.bar_nomb = "Palermo"
 
 # Sistema de Base de Datos
 <p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
