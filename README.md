@@ -208,7 +208,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 <p align="justify">Aca dejamos algunas consultas que hicimos a la base de datos:</p><br>
 
 ```sql
-select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
+SELECT fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
 where (modalidad_formato = "Recital" or modalidad_formato = "Paseo") and  barrio = "Palermo";<br>
 ```
 ```sql
@@ -218,7 +218,7 @@ WHERE aforo= "990" ;<br>
 
 ** Esto es un ejemplo **
 ```sql
-select fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
+SELECT fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
 WHERE NOT (modalidad_formato = "Recital" or modalidad_formato = "Paseo");<br>
 ```
 ```sql
@@ -226,11 +226,11 @@ SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, 
 from eventos  WHERE aforo= "990" LIMIT 0,10;<br>
 ```
 ```sql
-* SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, cierre,aforo, barrio 
+SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, cierre,aforo, barrio 
 from eventos  WHERE modalidad_formato= "recital" LIMIT 10,10;<br>
 ```
 ```sql
-select aforo, fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
+SELECT aforo, fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
 where (aforo = "1000" or aforo = "5000") or (modalidad_formato = "carrera" or modalidad_formato = "jornada")
 ORDER BY modalidad_formato desc , aforo asc;<br>
 ```
