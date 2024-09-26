@@ -189,7 +189,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     <td>
       <table>
         <tr>
-           <img src="p8.png" alt="Descripción de la imagen" width="800" long="200">
+           <img src="p8.png" alt="Descripción de la imagen" width="900" long="900">
         </tr>
       </table>
     </td>
