@@ -259,7 +259,7 @@ WHERE eventos.EVENTO = eventos_tipo.eve_nomb;
 # La base de datos reemplazada
  <img src="Tabla reemplazada.png" width="900" style="margin: 900px;"/>
 
-# Diagrama de entidad-relación (DER)
+# Diagrama de entidad relación
 <p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
 <div style="display: flex; justify-content: center;">
     <img src="Base_Datos_TP2.png" width="800" style="margin: 800px;"/>
