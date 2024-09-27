@@ -267,7 +267,7 @@ WHERE eventos.EVENTO = eventos_tipo.eve_nomb;
 # Consultas
 <p align="justify">Aca dejamos algunas consultas que hicimos a la base de datos:</p><br>
 
-* Selecciona los eventos cuando el formato sea recital o concierto y ocurren en el barrio palermo
+* Selecciona los eventos cuando el formato sea recital o concierto que ocurren en el barrio de palermo
 
 ```sql
 
