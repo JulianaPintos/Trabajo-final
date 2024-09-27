@@ -253,7 +253,7 @@ ORDER BY modalidad_formato desc , aforo asc;<br>
 ```
 
 ** Esto es un ejemplo **
-<p Seleccionar los eventos cuando el formato es recital o concierto y ocurren en el barrio palermo</p>
+* Seleccionar los eventos cuando el formato sea recital o concierto y ocurren en el barrio palermo
 
 ```sql
 
@@ -267,7 +267,7 @@ JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
 where (modalidad_formatos.for_nomb = "Recital" or modalidad_formatos.for_nomb = "Paseo") AND 
 barrios.bar_nomb = "Palermo";
 ```
-<p Cuenta todos los eventos cuando el aforo es 990</p>
+* Cuenta todos los eventos cuando el aforo es 990
 
 ```sql
 SELECT  eventos.FECHA AS horario,modalidad_formatos.for_nomb as formato, aforos.afo_nomb,
@@ -277,7 +277,7 @@ JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
 JOIN aforos ON eventos.AFORO = aforos.afo_nomb
 WHERE aforos.afo_nomb = "990";
 ```
-<p Seleccionar los eventos que se realzan en el barrio palermo pero no cuando el formato es recital o concierto ocurren</p>
+* Seleccionar los eventos que se realzan en el barrio palermo pero no cuando el formato es recital o concierto ocurren
 
 ```sql
 SELECT eventos.fecha as horario,eventos_tipo.eve_nomb,
