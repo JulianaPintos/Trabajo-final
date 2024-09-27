@@ -40,7 +40,7 @@
 5. [La base de datos original](#la-base-de-datos-original)
 6. [Utilizamos los siguientes comandos para reemplazar la base de datos](#utilizamos-los-siguientes-comandos-para-reemplazar-la-base-de-datos)
 7. [La base de datos reemplazada](#la-base-de-datos-reemplazada)
-8. [Diagrama de entidad relación (DER)](#diagrama-de-entidad-relación-(DER))
+8. [Diagrama de entidad relación](#diagrama-de-entidad-relación)
 9. [Consultas](#consultas)
 10. [Conclusión](#conclusión)
 11. [Bibliografía](#bibliografía)
