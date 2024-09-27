@@ -37,9 +37,12 @@
 2. [Introducción](#introducción)
 3. [Importar un archivo excel a heidi](#importar-un-archivo-excel-a-heidi)
 4. [Crear una nueva tabla y exportar la información de forma ordenada](#crear-una-nueva-tabla-y-exportar-la-información-de-forma-ordenada)
-5. [Sistema de base de datos](#sistema-de-base-de-datos)
-6. [Consultas](#consultas)
-7. 
+5. [La base de datos original](#la-base-de-datos-original)
+6. [Utilizamos los siguientes comandos para reemplazar la base de datos](#utilizamos-los-siguientes-comandos-para-reemplazar-la-base-de-datos)
+7. [La base de datos reemplazada](#la-base-de-datos-reemplazada)
+8. [Sistema de base de datos](#sistema-de-base-de-datos)
+9. [Consultas](#consultas)
+10. [Conclusión](#conclusión)
 
 
 # Trabajo final
@@ -218,7 +221,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
  <img src="Tabla original.png" width="900" style="margin: 900px;"/>
 
 
-# Usamos estos comandos para reemplazar la base de datos
+# Utilizamos los siguientes comandos para reemplazar la base de datos
 ```sql
 UPDATE eventos
 JOIN lugares ON eventos.lugar = lugares.lug_nomb
