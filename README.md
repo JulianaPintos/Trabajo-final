@@ -352,7 +352,8 @@ ORDER BY modalidad_formatos.for_nomb desc , aforos.afo_nomb ASC;
 ```
 
 # Conclusión 
-<p>En conclusión, durante el trabajo enfrentamos dificultades al seleccionar una base de datos, utilizar las aplicaciones GitHub, HeidiSQL y XAMPP, y también al elaborar las consultas. Sin embargo, gracias al trabajo en equipo, pudimos superar estos obstáculos y logramos terminar el proyecto a tiempo.</p>
+
+<p aling="justify">En conclusión, durante el trabajo enfrentamos dificultades al seleccionar una base de datos, utilizar las aplicaciones GitHub, HeidiSQL y XAMPP, y también al elaborar las consultas. Sin embargo, gracias al trabajo en equipo, pudimos superar estos obstáculos y logramos terminar el proyecto a tiempo.</p>
 
 # Bibliografía
 
