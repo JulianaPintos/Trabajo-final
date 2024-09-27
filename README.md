@@ -101,7 +101,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
-* TABLA 2 
+<li>TABLA 2 </li>
 <table>
   <tr>
     <td colspan="2">
@@ -129,7 +129,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
-* TABLA 3
+<li>TABLA 3 </li>
 <table>
   <tr>
     <td colspan="2">
@@ -157,7 +157,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
-* TABLA 4
+<li>TABLA 4 </li>
 <table>
   <tr>
     <td colspan="2">
@@ -185,7 +185,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
-* TABLA 5
+<li>TABLA 5 </li>
 <table>
   <tr>
     <td colspan="2">
