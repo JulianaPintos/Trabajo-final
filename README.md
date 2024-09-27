@@ -222,7 +222,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 
 
 # Utilizamos los siguientes comandos para reemplazar la base de datos
-* Esta consulta actualiza la información de la tabla principal de eventos. En este caso la columna "lugar" contenia el nombres, estos serán reemplazados por el ID de lugar.
+* Esta consulta actualiza la información de la tabla principal de eventos. En estos casos actualizaremos las columnas de "lugar","barrio","modalidad_formato","aforo" y "eventos" que contiene sus nombres, estos serán reemplazados por el ID de de cada campos.
 ```sql
 UPDATE eventos
 JOIN lugares ON eventos.lugar = lugares.lug_nomb
