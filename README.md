@@ -31,6 +31,14 @@
   </tr>
 </table>
 
+## Índice
+
+1. [Trabajo final](#trabajo-final)
+2. [Introducción](#introducción)
+3. [Importar un archivo excel a heidi](#importar-un-archivo-excel-a-heidi)
+4. [Crear una nueva tabla y exportar la información de forma ordenada](#crear-una-nueva-tabla-y-exportar-la-información-de-forma-ordenada)
+
+
 # Trabajo final
 <p alingn="justify">Presentar la base de datos elegida al profesor y realizar un análisis de los archivos excel o del formato que esté la información y en base a eso diseñar una base de datos con sus tablas que contenga dicha información. Diseñar también indices alternativos y las relaciones entre las mismas. <br>Presentar el diseño de las tablas gráficamente mediante el software que usted desee.</p>
 <p><b>Lenguaje SQL</b>
