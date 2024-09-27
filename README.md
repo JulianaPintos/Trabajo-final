@@ -336,3 +336,5 @@ where (aforos.afo_nomb = "1000" or aforos.afo_nomb = "5000") OR
 ORDER BY modalidad_formatos.for_nomb desc , aforos.afo_nomb asc;
 ```
 
+# Conclusión 
+# Bi
