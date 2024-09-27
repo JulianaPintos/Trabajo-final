@@ -218,9 +218,6 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
  <img src="Tabla original.png" width="900" style="margin: 900px;"/>
 
 
-# La base de datos reemplazada
- <img src="Tabla reemplazada.png" width="900" style="margin: 900px;"/>
-
 # Usando estos comandos para reemplazar la base de datos
 ```sql
 UPDATE eventos
@@ -228,6 +225,10 @@ JOIN lugares ON eventos.lugar = lugares.lug_nomb
 SET eventos.lugar = lugares.lug_nuro
 WHERE eventos.lugar = lugares.lug_nomb;
 ```
+
+# La base de datos reemplazada
+ <img src="Tabla reemplazada.png" width="900" style="margin: 900px;"/>
+
 # Sistema de Base de Datos
 <p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
 <div style="display: flex; justify-content: center;">
