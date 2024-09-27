@@ -256,24 +256,7 @@ ORDER BY modalidad_formato desc , aforo asc;<br>
 <p Seleccionar los eventos cuando el formato es recital o concierto y ocurren en el barrio palermo</p>
 
 ```sql
-SELECT eventos.fecha as horario,eventos_tipo.eve_nomb,
-modalidad_formatos.for_nomb as formato, barrios.bar_nomb from eventos
-JOIN eventos_tipo ON eventos.evento = eventos_tipo.eve_nomb
-JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
-JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
-where (modalidad_formatos.for_nomb = "Recital" or modalidad_formatos.for_nomb = "Paseo") AND 
-barrios.bar_nomb = "Palermo";
------------------------------------------------------------------------------------
-SELECT eventos.fecha as horario,eventos_tipo.eve_nomb,
-modalidad_formatos.for_nuro as formato, barrios.bar_nuro from eventos
 
-JOIN eventos_tipo ON eventos.evento = eventos_tipo.eve_nomb
-JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
-JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
-
-where (modalidad_formatos.for_nuro = 1 or modalidad_formatos.for_nuro = 2) AND 
-barrios.bar_nuro = 2;
-------------------------------------------------------------------------------------
 SELECT eventos.fecha as horario,eventos_tipo.eve_nomb,
 modalidad_formatos.for_nuro as formato, barrios.bar_nuro from eventos
 
