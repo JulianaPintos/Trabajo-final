@@ -98,7 +98,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
-* TABLA 2
+* TABLA 2 
 <table>
   <tr>
     <td colspan="2">
@@ -210,6 +210,12 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
     </td>
   </tr>
 </table>
+
+# Sistema de Base de Datos
+<p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
+<div style="display: flex; justify-content: center;">
+    <img src="Base_Datos_TP2.png" width="800" style="margin: 800px;"/>
+  </div>
 
 
 # Consultas
@@ -330,8 +336,3 @@ where (aforos.afo_nomb = "1000" or aforos.afo_nomb = "5000") OR
 ORDER BY modalidad_formatos.for_nomb desc , aforos.afo_nomb asc;
 ```
 
-# Sistema de Base de Datos
-<p>Para finalizar el trabaja hicimos un diagrama de clases mostrando las relaciones que tienen dichas tablas: </p><br>
-<div style="display: flex; justify-content: center;">
-    <img src="Base_Datos_TP2.png" width="800" style="margin: 800px;"/>
-  </div>
