@@ -218,12 +218,36 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
  <img src="Tabla original.png" width="900" style="margin: 900px;"/>
 
 
-# Usando estos comandos para reemplazar la base de datos
+# Usamos estos comandos para reemplazar la base de datos
 ```sql
 UPDATE eventos
 JOIN lugares ON eventos.lugar = lugares.lug_nomb
 SET eventos.lugar = lugares.lug_nuro
 WHERE eventos.lugar = lugares.lug_nomb;
+```
+```sql
+UPDATE eventos
+JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
+SET eventos.BARRIO = barrios.bar_nuro
+WHERE eventos.BARRIO = barrios.bar_nomb
+```
+```sql
+UPDATE eventos
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
+SET eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nuro
+WHERE eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb;
+```
+```sql
+UPDATE eventos
+JOIN aforos ON eventos.AFORO = aforos.afo_nomb
+SET eventos.AFORO = aforos.afo_nuro
+WHERE eventos.AFORO = aforos.afo_nomb;
+```
+```sql
+UPDATE eventos
+JOIN eventos_tipo ON eventos.EVENTO = eventos_tipo.eve_nomb
+SET eventos.EVENTO = eventos_tipo.eve_nuro
+WHERE eventos.EVENTO = eventos_tipo.eve_nomb;
 ```
 
 # La base de datos reemplazada
@@ -239,45 +263,16 @@ WHERE eventos.lugar = lugares.lug_nomb;
 # Consultas
 <p align="justify">Aca dejamos algunas consultas que hicimos a la base de datos:</p><br>
 
-```sql
-SELECT fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
-where (modalidad_formato = "Recital" or modalidad_formato = "Paseo") and  barrio = "Palermo";<br>
-```
-```sql
-SELECT  fecha AS horario,modalidad_formato as formato,aforo, barrio, COUNT(*) as evento FROM eventos
-WHERE aforo= "990" ;<br>
-```
-
-** Esto es un ejemplo **
-```sql
-SELECT fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
-WHERE NOT (modalidad_formato = "Recital" or modalidad_formato = "Paseo");<br>
-```
-```sql
-SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, cierre,aforo, barrio 
-from eventos  WHERE aforo= "990" LIMIT 0,10;<br>
-```
-```sql
-SELECT fecha AS horario, evento, lugar, modalidad_formato as formato, apertura, cierre,aforo, barrio 
-from eventos  WHERE modalidad_formato= "recital" LIMIT 10,10;<br>
-```
-```sql
-SELECT aforo, fecha as horario,evento ,modalidad_formato as formato, barrio from eventos
-where (aforo = "1000" or aforo = "5000") or (modalidad_formato = "carrera" or modalidad_formato = "jornada")
-ORDER BY modalidad_formato desc , aforo asc;<br>
-```
-
-** Esto es un ejemplo **
-* Seleccionar los eventos cuando el formato sea recital o concierto y ocurren en el barrio palermo
+* Selecciona los eventos cuando el formato sea recital o concierto y ocurren en el barrio palermo
 
 ```sql
 
 SELECT eventos.fecha as horario,eventos_tipo.eve_nomb,
-modalidad_formatos.for_nuro as formato, barrios.bar_nuro from eventos
+modalidad_formatos.for_nomb as formato, barrios.bar_nomb from eventos
 
-JOIN eventos_tipo ON eventos.evento = eventos_tipo.eve_nomb
-JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
-JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
+JOIN eventos_tipo ON eventos.evento = eventos_tipo.eve_nuro
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nuro
+JOIN barrios ON eventos.BARRIO = barrios.bar_nuro
 
 where (modalidad_formatos.for_nomb = "Recital" or modalidad_formatos.for_nomb = "Paseo") AND 
 barrios.bar_nomb = "Palermo";
@@ -285,56 +280,69 @@ barrios.bar_nomb = "Palermo";
 * Cuenta todos los eventos cuando el aforo es 990
 
 ```sql
-SELECT  eventos.FECHA AS horario,modalidad_formatos.for_nomb as formato, aforos.afo_nomb,
+SELECT  eventos.FECHA AS horario,modalidad_formatos.for_nomb , aforos.afo_nomb,
 barrios.bar_nomb, COUNT(*) as evento FROM eventos
-JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
-JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
-JOIN aforos ON eventos.AFORO = aforos.afo_nomb
+
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nuro
+JOIN barrios ON eventos.BARRIO = barrios.bar_nuro
+JOIN aforos ON eventos.AFORO = aforos.afo_nuro
+
 WHERE aforos.afo_nomb = "990";
 ```
-* Seleccionar los eventos que se realzan en el barrio palermo pero no cuando el formato es recital o concierto ocurren
+* Selecciona los eventos que se realzan en el barrio palermo pero no cuando el formato es recital o concierto
 
 ```sql
 SELECT eventos.fecha as horario,eventos_tipo.eve_nomb,
 modalidad_formatos.for_nomb as formato, barrios.bar_nomb from eventos
-JOIN eventos_tipo ON eventos.evento = eventos_tipo.eve_nomb
-JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
-JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
+
+JOIN eventos_tipo ON eventos.evento = eventos_tipo.eve_nuro
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nuro
+JOIN barrios ON eventos.BARRIO = barrios.bar_nuro
+
 where NOT (modalidad_formatos.for_nomb = "Recital" or modalidad_formatos.for_nomb = "Paseo") and
 barrios.bar_nomb = "Palermo";
 ```
+* Selecciona los 10 primeros eventos cuando el aforo es igual a 990
 
 ```sql
 SELECT eventos.FECHA AS horario, eventos_tipo.eve_nomb, lugares.lug_nomb, modalidad_formatos.for_nomb as formato,
 eventos.APERTURA, eventos.CIERRE,aforos.afo_nomb, barrios.bar_nomb from eventos
-JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
-JOIN aforos ON eventos.AFORO = aforos.afo_nomb
-JOIN lugares ON eventos.LUGAR = lugares.lug_nomb
-JOIN eventos_tipo ON eventos.EVENTO = eventos_tipo.eve_nomb 
-JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
-WHERE aforos.afo_nomb= "990" LIMIT 0,10;
+
+JOIN barrios ON eventos.BARRIO = barrios.bar_nuro
+JOIN aforos ON eventos.AFORO = aforos.afo_nuro
+JOIN lugares ON eventos.LUGAR = lugares.lug_nuro
+JOIN eventos_tipo ON eventos.EVENTO = eventos_tipo.eve_nuro 
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nuro
+
+WHERE aforos.afo_nomb = "990" LIMIT 0,10;
 ```
+* Ignora los primeros 10 eventos y selecciona los siguientes 10 eventos cuando el formato es recital
 
 ```sql
 SELECT eventos.FECHA AS horario, eventos_tipo.eve_nomb, lugares.lug_nomb, modalidad_formatos.for_nomb as formato,
 eventos.APERTURA, eventos.CIERRE,aforos.afo_nomb, barrios.bar_nomb from eventos
-JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
-JOIN aforos ON eventos.AFORO = aforos.afo_nomb
-JOIN lugares ON eventos.LUGAR = lugares.lug_nomb
-JOIN eventos_tipo ON eventos.EVENTO = eventos_tipo.eve_nomb 
-JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
+
+JOIN barrios ON eventos.BARRIO = barrios.bar_nuro
+JOIN aforos ON eventos.AFORO = aforos.afo_nuro
+JOIN lugares ON eventos.LUGAR = lugares.lug_nuro
+JOIN eventos_tipo ON eventos.EVENTO = eventos_tipo.eve_nuro
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nuro
+
 WHERE modalidad_formatos.for_nomb = "Recital" LIMIT 10,10;
 ```
-
+* Muestra los eventos cuando el aforos es igual a 1000 o 5000, el formato es carrera o jornada, ordena los formatos de manera decendiente y los aforos acendiente
 ```sql
 SELECT eventos.FECHA AS horario,modalidad_formatos.for_nomb as formato, aforos.afo_nomb,
 barrios.bar_nomb from eventos
-JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nomb
-JOIN barrios ON eventos.BARRIO = barrios.bar_nomb
-JOIN aforos ON eventos.AFORO = aforos.afo_nomb
+
+JOIN modalidad_formatos ON eventos.MODALIDAD_FORMATO = modalidad_formatos.for_nuro
+JOIN barrios ON eventos.BARRIO = barrios.bar_nuro
+JOIN aforos ON eventos.AFORO = aforos.afo_nuro
+
 where (aforos.afo_nomb = "1000" or aforos.afo_nomb = "5000") OR 
 (modalidad_formatos.for_nomb = "carrera" or modalidad_formatos.for_nomb = "jornada")
-ORDER BY modalidad_formatos.for_nomb desc , aforos.afo_nomb asc;
+ORDER BY modalidad_formatos.for_nomb desc , aforos.afo_nomb ASC;
+
 ```
 
 # Conclusión 
