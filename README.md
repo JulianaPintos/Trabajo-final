@@ -350,9 +350,12 @@ ORDER BY modalidad_formatos.for_nomb desc , aforos.afo_nomb ASC;
 ```
 
 # Conclusión 
-<p>En conclusión, en el trabajo tuvimos dificultar al seleccionar una base de datos, usar la apalicación github, heidiSQL, xammp y también a la hora de elaborar las consultas, pero con el trabajo en equipo pudimos superar dichas dificultades y logramos terminar el trabajo a tiempo </p>
+<p>En conclusión, durante el trabajo enfrentamos dificultades al seleccionar una base de datos, utilizar las aplicaciones GitHub, HeidiSQL y XAMPP, y también al elaborar las consultas. Sin embargo, gracias al trabajo en equipo, pudimos superar estos obstáculos y logramos terminar el proyecto a tiempo.</p>
+
 # Bibliografia 
-* La página de donde sacamos la base de datos: 
+
+* La página de donde sacamos la base de datos:
+  
 http://data.buenosaires.gob.ar
 
 
