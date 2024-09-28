@@ -220,7 +220,7 @@ Para poder importar una tabla de excel a heidi, demos abrir en heidi y crear una
 </table>
 
 # La base de datos original 
- <img src="Tabla original.png" width="900" style="margin: 900px;"/>
+ <img src="BDEvento.PNG" width="900" style="margin: 900px;"/>
 
 
 # Utilizamos los siguientes comandos para reemplazar la base de datos
